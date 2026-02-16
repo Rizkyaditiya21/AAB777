@@ -1,14 +1,14 @@
 {
  "games":[
   {
-   "name":"Mahjong Ways 2",
+   "name":"Mahjong Ways",
    "folder":"mahjong",
-   "image":"https://i.imgur.com/7yUvePI.jpeg"
+   "provider":"pg"
   },
   {
-   "name":"Lucky Fortune",
-   "folder":"lucky",
-   "image":"https://i.imgur.com/7p6kKQw.jpeg"
+   "name":"Sweet Bonanza",
+   "folder":"sweet",
+   "provider":"pragmatic"
   }
  ]
 }
