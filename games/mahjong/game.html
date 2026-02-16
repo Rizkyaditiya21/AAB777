@@ -3,32 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <title>Mahjong Slot</title>
-<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="game.css">
+
 </head>
 
 <body>
 
-<h2>Mahjong Slot</h2>
+<div class="banner">
+<img src="../../assets/images/mahjong-banner.jpg">
+</div>
 
-<div class="reels">
+<div class="slot">
 
-<div class="reel"></div>
-<div class="reel"></div>
-<div class="reel"></div>
-<div class="reel"></div>
-<div class="reel"></div>
+<div id="reels" class="reels"></div>
 
 </div>
 
-<button onclick="spin()">SPIN</button>
-<p id="result"></p>
+<div class="control">
 
-<script src="../../js/storage.js"></script>
+<div id="balance"></div>
+
+<button onclick="spin()" class="spin">
+SPIN
+</button>
+
+<div id="result"></div>
+
+</div>
+
 <script src="../../js/balance.js"></script>
-<script src="../../js/slotEngine.js"></script>
-<script src="../../js/winLogic.js"></script>
+<script src="engine.js"></script>
 <script src="game.js"></script>
 
 </body>
 </html>
-
