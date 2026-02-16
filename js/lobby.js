@@ -5,17 +5,18 @@ fetch("data/config.json")
 .then(data=>{
 
  let container = document.getElementById("gameList");
-
- container.innerHTML = "";
+ container.innerHTML="";
 
  data.games.forEach(game=>{
 
   container.innerHTML += `
-   <div class="game-card"
-    onclick="openGame('${game.folder}')">
+   <div class="game-card" onclick="openGame('${game.folder}')">
 
-    🎰<br><br>
-    ${game.name}
+    <img src="${game.image}">
+
+    <div class="game-overlay">
+     🎰 ${game.name}
+    </div>
 
    </div>
   `;
