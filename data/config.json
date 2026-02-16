@@ -2,7 +2,13 @@
  "games":[
   {
    "name":"Mahjong Ways 2",
-   "folder":"mahjong"
+   "folder":"mahjong",
+   "image":"https://i.imgur.com/7yUvePI.jpeg"
+  },
+  {
+   "name":"Lucky Fortune",
+   "folder":"lucky",
+   "image":"https://i.imgur.com/7p6kKQw.jpeg"
   }
  ]
 }
