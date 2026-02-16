@@ -1,10 +1,17 @@
 updateBalanceDisplay();
 
-fetch("data/config.json")
-.then(res=>res.json())
+fetch("./data/config.json")
+.then(res=>{
+ if(!res.ok){
+  throw new Error("Config gagal load");
+ }
+ return res.json();
+})
 .then(data=>{
 
  let container = document.getElementById("gameList");
+
+ container.innerHTML = "";
 
  data.games.forEach(game=>{
 
@@ -18,9 +25,13 @@ fetch("data/config.json")
   `;
  });
 
+})
+.catch(err=>{
+ console.error(err);
+ document.getElementById("gameList").innerHTML =
+ "<p style='color:red'>Game gagal dimuat</p>";
 });
 
 function openGame(folder){
- window.location = `games/${folder}/game.html`;
+ window.location.href = `./games/${folder}/game.html`;
 }
-
