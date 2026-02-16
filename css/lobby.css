@@ -1,18 +1,61 @@
 body{
- background:#111;
+ margin:0;
+ font-family:Arial;
+ background:#0d0d0d;
  color:white;
- font-family:sans-serif;
 }
 
-.games{
+/* HEADER */
+
+.topbar{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:20px;
+ background:black;
+ border-bottom:2px solid gold;
+}
+
+.right{
  display:flex;
  gap:15px;
- padding:20px;
+ align-items:center;
 }
 
-.game-card{
- padding:20px;
- background:#222;
+button{
+ background:gold;
+ border:none;
+ padding:8px 15px;
+ font-weight:bold;
  cursor:pointer;
 }
 
+
+/* GAME GRID */
+
+.game-container{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:25px;
+ padding:40px;
+}
+
+
+/* CARD GAME */
+
+.game-card{
+ background:linear-gradient(145deg,#1a1a1a,#111);
+ border-radius:12px;
+ padding:25px;
+ text-align:center;
+ font-size:20px;
+ cursor:pointer;
+ transition:0.3s;
+ border:1px solid #222;
+}
+
+.game-card:hover{
+ transform:scale(1.05);
+ border-color:gold;
+ box-shadow:0 0 15px gold;
+}
