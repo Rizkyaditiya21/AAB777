@@ -1,1 +1,21 @@
+body{
+ background:#111;
+ color:white;
+ font-family:sans-serif;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ height:100vh;
+}
+
+.auth-box{
+ display:flex;
+ flex-direction:column;
+ gap:10px;
+ width:200px;
+}
+
+input,button{
+ padding:10px;
+}
 
