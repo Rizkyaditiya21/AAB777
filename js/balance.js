@@ -1,29 +1,16 @@
 function updateBalanceDisplay(){
 
- let user = getCurrentUser();
+ let balance = localStorage.getItem("balance");
 
- if(!user){
-   window.location="login.html";
+ if(!balance){
+  balance = 10000;
+  localStorage.setItem("balance", balance);
  }
 
- document.getElementById("balance").innerText =
- "💰 "+user.balance+" coins";
+ let el = document.getElementById("balance");
+
+ if(el){
+  el.innerText = "Saldo : " + balance;
+ }
+
 }
-
-function updateBalance(amount){
-
- let users = getUsers();
- let user = getCurrentUser();
-
- user.balance += amount;
-
- let index = users.findIndex(
-  u=>u.username===user.username
- );
-
- users[index] = user;
-
- saveUsers(users);
- setCurrentUser(user);
-}
-
