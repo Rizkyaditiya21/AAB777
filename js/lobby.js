@@ -1,36 +1,29 @@
-window.onload = function(){
+updateBalanceDisplay();
 
- if(typeof updateBalanceDisplay === "function"){
-  updateBalanceDisplay();
- }
+fetch("data/config.json")
+.then(res=>res.json())
+.then(data=>{
 
- fetch("./data/config.json")
- .then(res=>res.json())
- .then(data=>{
+ let container = document.getElementById("gameList");
 
-  let container = document.getElementById("gameList");
+ container.innerHTML = "";
 
-  container.innerHTML = "";
+ data.games.forEach(game=>{
 
-  data.games.forEach(game=>{
+  container.innerHTML += `
+   <div class="game-card"
+    onclick="openGame('${game.folder}')">
 
-   container.innerHTML += `
-    <div class="game-card"
-     onclick="openGame('${game.folder}')">
+    🎰<br><br>
+    ${game.name}
 
-     🎰 ${game.name}
+   </div>
+  `;
 
-    </div>
-   `;
-  });
-
- })
- .catch(err=>{
-  console.log("Config error:", err);
  });
 
-}
+});
 
 function openGame(folder){
- window.location.href = `./games/${folder}/game.html`;
+ window.location = `games/${folder}/game.html`;
 }
