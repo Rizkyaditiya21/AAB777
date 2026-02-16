@@ -1,36 +1,35 @@
-updateBalanceDisplay();
+window.onload = function(){
 
-fetch("./data/config.json")
-.then(res=>{
- if(!res.ok){
-  throw new Error("Config gagal load");
+ if(typeof updateBalanceDisplay === "function"){
+  updateBalanceDisplay();
  }
- return res.json();
-})
-.then(data=>{
 
- let container = document.getElementById("gameList");
+ fetch("./data/config.json")
+ .then(res=>res.json())
+ .then(data=>{
 
- container.innerHTML = "";
+  let container = document.getElementById("gameList");
 
- data.games.forEach(game=>{
+  container.innerHTML = "";
 
-  container.innerHTML += `
-   <div class="game-card"
-    onclick="openGame('${game.folder}')">
+  data.games.forEach(game=>{
 
-    🎰 ${game.name}
+   container.innerHTML += `
+    <div class="game-card"
+     onclick="openGame('${game.folder}')">
 
-   </div>
-  `;
+     🎰 ${game.name}
+
+    </div>
+   `;
+  });
+
+ })
+ .catch(err=>{
+  console.log("Config error:", err);
  });
 
-})
-.catch(err=>{
- console.error(err);
- document.getElementById("gameList").innerHTML =
- "<p style='color:red'>Game gagal dimuat</p>";
-});
+}
 
 function openGame(folder){
  window.location.href = `./games/${folder}/game.html`;
