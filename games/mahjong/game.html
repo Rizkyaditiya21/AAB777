@@ -5,7 +5,6 @@
 <title>Mahjong Slot</title>
 
 <link rel="stylesheet" href="game.css">
-
 </head>
 
 <body>
@@ -14,17 +13,19 @@
 <img src="../../assets/images/mahjong-banner.jpg">
 </div>
 
-<div class="slot">
-
-<div id="reels" class="reels"></div>
-
+<div class="slot-reel-container">
+  <div id="reel1" class="reel"></div>
+  <div id="reel2" class="reel"></div>
+  <div id="reel3" class="reel"></div>
+  <div id="reel4" class="reel"></div>
+  <div id="reel5" class="reel"></div>
 </div>
 
 <div class="control">
 
 <div id="balance"></div>
 
-<button onclick="spin()" class="spin">
+<button onclick="spinReels()" class="spin">
 SPIN
 </button>
 
@@ -33,8 +34,7 @@ SPIN
 </div>
 
 <script src="../../js/balance.js"></script>
-<script src="engine.js"></script>
-<script src="game.js"></script>
+<script src="../../js/reelEngine.js"></script>
 
 </body>
 </html>
