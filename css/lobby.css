@@ -1,1 +1,18 @@
+body{
+ background:#111;
+ color:white;
+ font-family:sans-serif;
+}
+
+.games{
+ display:flex;
+ gap:15px;
+ padding:20px;
+}
+
+.game-card{
+ padding:20px;
+ background:#222;
+ cursor:pointer;
+}
 
