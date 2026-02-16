@@ -1,14 +1,32 @@
 {
  "games":[
   {
-   "name":"Mahjong Ways",
-   "folder":"mahjong",
-   "provider":"pg"
+   "name":"Mahjong 2",
+   "folder":"mahjong2",
+   "thumb":"assets/images/mahjong2-thumb.jpg",
+   "banner":"assets/images/mahjong2-banner.jpg"
+"provider":"pg"
+  },
+  {
+   "name":"Lucky Neko",
+   "folder":"lucky-neko",
+   "thumb":"assets/images/lucky-neko-thumb.jpg",
+   "banner":"assets/images/lucky-neko-banner.jpg"
+"provider":"pg"
   },
   {
    "name":"Sweet Bonanza",
-   "folder":"sweet",
-   "provider":"pragmatic"
+   "folder":"sweet-bonanza",
+   "thumb":"assets/images/sweet-bonanza-thumb.jpg",
+   "banner":"assets/images/sweet-bonanza-banner.jpg"
+"provider":"pragmatic"
+  },
+  {
+   "name":"Sugar Rush",
+   "folder":"sugar-rush",
+   "thumb":"assets/images/sugar-rush-thumb.jpg",
+   "banner":"assets/images/sugar-rush-banner.jpg"
+"provider":"pragmatic"
   }
  ]
 }
