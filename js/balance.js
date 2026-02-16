@@ -7,10 +7,6 @@ function updateBalanceDisplay(){
   localStorage.setItem("balance", balance);
  }
 
- let el = document.getElementById("balance");
-
- if(el){
-  el.innerText = "Saldo : " + balance;
- }
+ document.getElementById("balance").innerText = "Saldo : " + balance;
 
 }
