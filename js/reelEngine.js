@@ -1,32 +1,23 @@
-const PNG_SYMBOLS = [
-  "assets/images/sym_cherry.png",
-  "assets/images/sym_bell.png",
-  "assets/images/sym_dragon.png",
-  "assets/images/sym_star.png",
-  "assets/images/sym_scatter.png"
-];
+const symbols = ["🀄","🍒","💎","⭐","🔔","🐉"];
 
-function getRandomSymbol() {
-  return PNG_SYMBOLS[Math.floor(Math.random() * PNG_SYMBOLS.length)];
+function getRandomSymbol(){
+ return symbols[Math.floor(Math.random()*symbols.length)];
 }
 
-function spinReels() {
-  for(let i=1; i<=5; i++){
-    let reel = document.getElementById("reel" + i);
-    reel.innerHTML = "";
+function spinReels(){
 
-    let pos = 0;
-    let spinInterval = setInterval(() => {
-      pos++;
-      let img = document.createElement("img");
-      img.src = getRandomSymbol();
-      img.style.transform = `translateY(${pos * 10}px)`;
-      reel.appendChild(img);
+ updateBalanceDisplay();
 
-      if(pos > 10) {
-        clearInterval(spinInterval);
-        reel.innerHTML = `<img src="${getRandomSymbol()}">`;
-      }
-    }, 50);
-  }
+ let reels = [];
+
+ for(let i=1; i<=5; i++){
+  let reel = document.getElementById("reel" + i);
+  reel.classList.add("spin-animation");
+  reel.innerText = getRandomSymbol();
+ }
+
+ setTimeout(()=>{
+  document.querySelectorAll(".reel").forEach(r=> r.classList.remove("spin-animation"));
+ }, 600);
+
 }
