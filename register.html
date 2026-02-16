@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+<div class="auth-box">
+
+<h2>REGISTER</h2>
+
+<input id="username" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="doRegister()">Register</button>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+
+<script>
+function doRegister(){
+ register(
+   username.value,
+   password.value
+ )
+}
+</script>
+
+</body>
+</html>
 
