@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>AAB777 Lobby</title>
+<title>AAB777 Casino</title>
 
 <link rel="stylesheet" href="css/lobby.css">
 
@@ -14,29 +14,44 @@
 
 <div class="logo">🎰 AAB777</div>
 
-<div class="menu">
+<div class="jackpot">
+💰 GRAND : <span id="jackpot">800000000</span>
+</div>
+
+<div class="user">
+Saldo : <span id="balance"></span>
 <button onclick="logout()">Logout</button>
-<div id="balance"></div>
 </div>
 
 </header>
 
 
 <!-- SLIDER -->
-<section class="banner">
-<div class="banner-text">
-<h1>WELCOME TO SLOT WORLD</h1>
-<p>Mainkan slot favorit kamu</p>
+<div class="slider">
+<div class="slide active">🔥 BONUS MEMBER BARU 100%</div>
+<div class="slide">💎 CASHBACK SLOT 10%</div>
+<div class="slide">🏆 TURNAMEN SLOT BULANAN</div>
 </div>
-</section>
 
 
-<!-- GAME LIST -->
-<section class="game-container" id="gameList"></section>
+<!-- PROVIDER MENU -->
+<div class="providers">
+
+<button onclick="filterProvider('all')" class="active">ALL</button>
+<button onclick="filterProvider('pg')">PG SOFT</button>
+<button onclick="filterProvider('pragmatic')">PRAGMATIC</button>
+
+</div>
+
+
+<!-- GAME GRID -->
+<div id="gameList" class="games"></div>
 
 
 <script src="js/storage.js"></script>
 <script src="js/balance.js"></script>
+<script src="js/jackpot.js"></script>
+<script src="js/slider.js"></script>
 <script src="js/lobby.js"></script>
 
 </body>
